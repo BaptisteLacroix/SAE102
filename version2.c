@@ -6,10 +6,11 @@
 
 void version2(int grille[10][10], int largeur, int cible, solution tabSolutions[], int *taille)
 {
-    int indiceLigne = 0, indiceColonne = 0;
-    while ((indiceLigne < largeur))
+    int indiceLigne = 0;
+    int indiceColonne = 0;
+    while (indiceLigne < largeur)
     {
-        while ((indiceColonne < largeur))
+        while (indiceColonne < largeur)
         {
             if (indiceColonne < largeur - 2)
                 test_ligne2(grille, indiceLigne, indiceColonne, cible, tabSolutions, taille);
@@ -165,12 +166,12 @@ void test_diagonale_gauche2(int grille[10][10], int indiceLigne, int indiceColon
 
 void ajouteSolutions(int grille[10][10], int A0, int A1, int B0, int B1, int C0, int C1, solution tabSolutions[], char signe, int *taille, int cible)
 {
-    tabSolutions[*(taille)].a = grille[A0][A1];
-    tabSolutions[*(taille)].b = grille[B0][B1];
-    tabSolutions[*(taille)].op = signe;
-    tabSolutions[*(taille)].c = grille[C0][C1];
-    tabSolutions[*(taille)].cible = cible;
-    *(taille) += 1;
+    tabSolutions[*taille].a = grille[A0][A1];
+    tabSolutions[*taille].b = grille[B0][B1];
+    tabSolutions[*taille].op = signe;
+    tabSolutions[*taille].c = grille[C0][C1];
+    tabSolutions[*taille].cible = cible;
+    *taille += 1;
 }
 
 int compare (const void * a, const void * b)

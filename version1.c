@@ -6,7 +6,9 @@
 
 void version1 (int grille[10][10], int largeur, int cible)
 {
-    int trouve = 0, indiceLigne = 0, indiceColonne = 0;
+    int trouve = 0;
+    int indiceLigne = 0;
+    int indiceColonne = 0;
     while ((trouve == 0) && (indiceLigne < largeur))
     {
         while ((trouve == 0) && (indiceColonne < largeur))
